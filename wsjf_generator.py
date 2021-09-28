@@ -19,7 +19,8 @@ class wsjf_generator():
     
     #def __init__(self):
         #init code
-        
+	
+    #machineName is Station Name
     def setHeader(self, mode="oper", pn = "debug", sn = "debug", rev = "NA", machineName="ManTest", user= getlogin(), uniqueID=""):
         if(uniqueID==""):
             uniqueID = str(uuid.uuid4())
@@ -35,7 +36,7 @@ class wsjf_generator():
                 "processCode": 50,
                 "processName": "PCBA test",
                 "result": "P",
-                "machineName": machineName,
+                "machineName": machineName, 
                 "location": "Production",
                 "purpose": "Production Test",
                 "start": datetime.now().strftime("%Y-%m-%dT%H:%M:%S")+"+%d:00"%(int(datetime.now().strftime("%H"))-int(datetime.utcnow().strftime("%H"))),
