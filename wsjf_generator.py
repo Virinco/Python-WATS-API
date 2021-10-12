@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+Author: Jesper Johnsen - jsj@sky-watch.com
 Created on Thu Mar 18 08:35:49 2021
 Class to generate WATS JSON Format reports and publish the report
 """
