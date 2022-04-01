@@ -12,7 +12,7 @@ import uuid
 
 class wsjf_generator():
     sWatsToken="" # "Your Token here"
-    sWatsURL ="" # "Your URL here"
+    sWatsURL ="https://example.wats.com/api/report/wsjf" # Your URL here, remember to include the rest api endpoint
     wsjf_dict = {}
     counterID = 0
     TestSequencerName="wsjf_generator.py"
@@ -427,8 +427,8 @@ def main(options=None):
     #wsjf.addChart(path_Chart2, [0,2,2.6, 2.29, 2.29, 1, 1], [6,7,8, 10, 10.7, 10.8,  12], "Fantastic Dataset 3", [0, 0], [5, 15], [2.6, 2.6, 2, 2], [2, 10, 11, 15])  
     #wsjf.setComment("Test generated to test Python API")
 	
-    wsjf.pushReport(sWatsURL="Your URL", sWatsToken="Your Token") # one can set the token and Url in the class file, or by setting wsjf.sWatsToken and wsjf.sWatsURL   
-	# if submit to server fails	the wsjf was saved to a file
+    wsjf.pushReport(sWatsURL="https://example.wats.com/api/report/wsjf", sWatsToken="Your Token") # one can set the token and Url in the class file, or by setting wsjf.sWatsToken and wsjf.sWatsURL   
+	# if submit to server fails the wsjf was saved to a file
         
     print("Submitted Report")
     print(json.dumps(wsjf.wsjf_dict, indent=2))
